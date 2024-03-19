@@ -1,5 +1,3 @@
-const mongoose = require('mongoose');
-const productSchema = require('./productSchema');
 const populateTestDataDogs = require('./testDataDogs');
 const Product = require('./db');
 
