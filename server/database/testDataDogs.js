@@ -29,6 +29,7 @@ module.exports = (quantity, callback) => {
           },
         },
       }],
+      relatedItems: [1, 2, 3, 4, 5],
     };
     testArray.push(product);
   }

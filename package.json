@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pop": "node server/populateData.js",
+    "pop": "node server/database/populateData.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/app.js"
   },
