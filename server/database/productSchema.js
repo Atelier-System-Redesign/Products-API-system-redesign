@@ -28,7 +28,6 @@ const resultsSchema = new mongoose.Schema([{
 
 const productSchema = new mongoose.Schema({
   id: Number,
-  node_id: String,
   name: String,
   slogan: String,
   description: String,
@@ -36,6 +35,7 @@ const productSchema = new mongoose.Schema({
   default_price: String,
   features: [featuresSchema],
   results: [resultsSchema],
+  relatedItems: [Number],
 });
 
 module.exports = productSchema;

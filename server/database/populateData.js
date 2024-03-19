@@ -17,8 +17,8 @@ function insertProducts(products) {
 
 // VIEW DATABASE
 
-// Product.find()
-//   .then((results) => results.forEach((result) => console.log(JSON.stringify(result))));
+Product.find({})
+  .then((results) => results.forEach((result) => console.log(JSON.stringify(result))));
 
 // DELETE FROM DATABASE
 
