@@ -13,12 +13,12 @@ function insertProducts(products) {
 
 // POPULATE TEST DATA
 
-// populateTestDataDogs(10, insertProducts);
+// populateTestDataDogs(4, insertProducts);
 
 // VIEW DATABASE
 
-Product.find({})
-  .then((results) => results.forEach((result) => console.log(JSON.stringify(result))));
+// Product.find({})
+//   .then((results) => results.forEach((result) => console.log(JSON.stringify(result))));
 
 // DELETE FROM DATABASE
 

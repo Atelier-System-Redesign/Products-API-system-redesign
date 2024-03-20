@@ -1,6 +1,6 @@
 const Product = require('../database/db');
 
-module.exports = (page = 1, count = 5) => Product.find({}, 'id name slogan description category default_price -_id')
+module.exports = (page, count) => Product.find({}, { _id: 0, __v: 0 })
   .sort({ id: 'asc' })
   .skip((page - 1) * count)
   .limit(count);
