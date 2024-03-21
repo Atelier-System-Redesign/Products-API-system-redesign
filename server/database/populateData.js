@@ -22,5 +22,5 @@ function insertProducts(products) {
 
 // DELETE FROM DATABASE
 
-// Product.deleteMany({ id: { $gte: 0, $lte: 9 } })
-//   .then((results) => console.log(JSON.stringify(results)));
+Product.deleteMany({ id: { $gte: 0, $lte: 1000000000 } })
+  .then((results) => console.log(JSON.stringify(results)));

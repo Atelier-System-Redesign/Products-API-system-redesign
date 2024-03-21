@@ -1,3 +1,8 @@
 /node_modules
-/server/database/csvData
-/server/database/jsonData
+/server/database/csvData/features.csv
+/server/database/csvData/photos.csv
+/server/database/csvData/product.csv
+/server/database/csvData/related.csv
+/server/database/csvData/skus.csv
+/server/database/csvData/styles.csv
+/server/database/csvData/cleanedPhotosData.csv
