@@ -1,3 +1,3 @@
 const Product = require('../database/db');
 
-module.exports = (productId) => Product.find({ id: productId }, 'id name slogan description category default_price features -_id');
+module.exports = (productId) => Product.find({ id: productId }, { _id: 0, __v: 0 });

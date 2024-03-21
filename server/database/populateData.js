@@ -13,7 +13,7 @@ function insertProducts(products) {
 
 // POPULATE TEST DATA
 
-// populateTestDataDogs(10, insertProducts);
+// populateTestDataDogs(4, insertProducts);
 
 // VIEW DATABASE
 

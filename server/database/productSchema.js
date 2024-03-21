@@ -1,16 +1,21 @@
 const mongoose = require('mongoose');
 
-const featuresSchema = new mongoose.Schema([{
+const featuresSchema = new mongoose.Schema({
   feature: String,
   value: String,
-}]);
+}, { _id: false });
 
-const photosSchema = new mongoose.Schema([{
+const photosSchema = new mongoose.Schema({
   thumbnail_url: String,
   url: String,
-}]);
+}, { _id: false });
 
-const resultsSchema = new mongoose.Schema([{
+const skusSchema = new mongoose.Schema({
+  quantity: Number,
+  size: String,
+}, { _id: false });
+
+const resultsSchema = new mongoose.Schema({
   style_id: Number,
   name: String,
   original_price: String,
@@ -19,12 +24,9 @@ const resultsSchema = new mongoose.Schema([{
   photos: [photosSchema],
   skus: {
     type: Map,
-    of: new mongoose.Schema({
-      quantity: Number,
-      size: String,
-    }),
+    of: skusSchema,
   },
-}]);
+}, { _id: false });
 
 const productSchema = new mongoose.Schema({
   id: Number,
