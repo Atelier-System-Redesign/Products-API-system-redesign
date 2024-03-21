@@ -14,7 +14,7 @@ const resultsSchema = new mongoose.Schema([{
   style_id: Number,
   name: String,
   original_price: String,
-  sale_price: { type: String, default: null },
+  sale_price: { type: [String, null], default: null },
   isDefault: Boolean,
   photos: [photosSchema],
   skus: {

@@ -17,10 +17,10 @@ function insertProducts(products) {
 
 // VIEW DATABASE
 
-Product.find({})
-  .then((results) => results.forEach((result) => console.log(JSON.stringify(result))));
+// Product.find({})
+//   .then((results) => results.forEach((result) => console.log(JSON.stringify(result))));
 
 // DELETE FROM DATABASE
 
-// Product.deleteMany({ id: { $gte: 0, $lte: 9 } })
-//   .then((results) => console.log(JSON.stringify(results)));
+Product.deleteMany({ id: { $gte: 0, $lte: 1000000000 } })
+  .then((results) => console.log(JSON.stringify(results)));
