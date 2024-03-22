@@ -20,7 +20,7 @@ const resultsSchema = new mongoose.Schema({
   name: String,
   original_price: String,
   sale_price: { type: [String, null], default: null },
-  isDefault: Boolean,
+  'default?': Boolean,
   photos: [photosSchema],
   skus: {
     type: Map,
@@ -29,7 +29,7 @@ const resultsSchema = new mongoose.Schema({
 }, { _id: false });
 
 const productSchema = new mongoose.Schema({
-  id: Number,
+  id: { type: Number, index: true },
   name: String,
   slogan: String,
   description: String,

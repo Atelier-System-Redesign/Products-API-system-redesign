@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const skusDataSchema = new mongoose.Schema({
   id: Number,
-  style_id: Number,
+  styleId: { type: Number, index: true },
   size: String,
   quantity: Number,
 }, { collection: 'skusData' });

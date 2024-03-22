@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const relatedDataSchema = new mongoose.Schema({
   id: Number,
-  current_product_id: Number,
+  current_product_id: { type: Number, index: true },
   related_product_id: Number,
 }, { collection: 'relatedData' });
 

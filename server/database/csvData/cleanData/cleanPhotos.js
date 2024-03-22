@@ -4,12 +4,12 @@ const fastcsv = require('fast-csv');
 
 let counter = 0;
 
-const stream = fs.createWriteStream('server/database/csvData/cleanData/cleanedPhotosData.csv');
+const stream = fs.createWriteStream('server/database/csvData/cleanData/photos.csv');
 const csvStream = fastcsv.format({ headers: true });
 csvStream.pipe(stream);
 
 const rl = readline.createInterface({
-  input: fs.createReadStream('server/database/csvData/photos.csv'),
+  input: fs.createReadStream('server/database/csvData/dirtyPhotos.csv'),
   output: process.stdout,
   terminal: false,
 });

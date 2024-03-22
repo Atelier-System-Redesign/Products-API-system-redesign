@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const photosDataSchema = new mongoose.Schema({
   id: Number,
-  styleId: Number,
+  styleId: { type: Number, index: true },
   url: String,
   thumbnail_url: String,
 }, { collection: 'photosData' });
