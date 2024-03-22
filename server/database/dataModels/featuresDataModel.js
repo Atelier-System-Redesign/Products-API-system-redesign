@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const featuresDataSchema = new mongoose.Schema({
   id: Number,
-  product_id: Number,
+  product_id: { type: Number, index: true },
   feature: String,
   value: String,
 }, { collection: 'featuresData' });

@@ -2,7 +2,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 
 const productsDataSchema = new mongoose.Schema({
-  id: Number,
+  id: { type: Number, index: true },
   name: String,
   slogan: String,
   description: String,
