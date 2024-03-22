@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 const { getStyles } = require('../model');
 
 module.exports = (req, res) => {
