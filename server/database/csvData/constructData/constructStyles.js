@@ -1,3 +1,5 @@
+/* eslint-disable no-loop-func */
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable no-console */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-await-in-loop */
@@ -5,9 +7,10 @@ const mongoose = require('mongoose');
 const Product = require('../../db');
 const StylesData = require('../../dataModels/stylesDataModel');
 
-module.exports = function constructStyles() {
-  async function aggregateStyles() {
-    return StylesData.aggregate([
+module.exports = async function constructStyles() {
+  const documentCount = await StylesData.countDocuments();
+  function aggregateStyles() {
+    const aggregation = StylesData.aggregate([
       {
         $group: {
           _id: '$productId',
@@ -26,15 +29,17 @@ module.exports = function constructStyles() {
           },
         },
       },
-    ]).exec();
+    ]);
+
+    return aggregation.cursor();
   }
 
-  async function updateProducts(aggregatedStyles) {
+  async function updateProducts(aggregatedStylesCursor) {
     let batchOperations = [];
     const batchSize = 1000;
+    let documentsProcessed = 0;
 
-    for (let i = 0; i < aggregatedStyles.length; i += 1) {
-      const featureGroup = aggregatedStyles[i];
+    for await (const featureGroup of aggregatedStylesCursor) {
       const updateOperation = {
         updateOne: {
           filter: { id: featureGroup._id },
@@ -48,21 +53,30 @@ module.exports = function constructStyles() {
 
       batchOperations.push(updateOperation);
 
-      if (batchOperations.length >= batchSize || i === aggregatedStyles.length - 1) {
+      if (batchOperations.length >= batchSize) {
         await Product.bulkWrite(batchOperations).catch((error) => {
+          documentsProcessed += batchOperations.length;
           console.error('Error processing batch:', error);
         });
-        console.log(`Adding Styles to Products. Documents processed: ${i + 1} / ${aggregatedStyles.length}, approximately ${Math.floor(((i + 1) / aggregatedStyles.length) * 100)}% complete`);
+        console.log(`Adding Styles to Products. Documents processed: ${documentsProcessed} / ${documentCount}, approximately ${Math.floor((documentsProcessed / documentCount) * 100)}% complete`);
         batchOperations = [];
       }
+    }
+
+    if (batchOperations.length > 0) {
+      await Product.bulkWrite(batchOperations).catch((error) => {
+        documentsProcessed += batchOperations.length;
+        console.error('Error processing batch:', error);
+      });
+      console.log(`Final batch processed. Documents processed: ${batchOperations.length}`);
     }
   }
 
   async function addStylesToProducts() {
     try {
       await StylesData.createIndexes({ product_id: 1 });
-      const aggregatedStyles = await aggregateStyles();
-      await updateProducts(aggregatedStyles);
+      const aggregatedStylesCursor = aggregateStyles();
+      await updateProducts(aggregatedStylesCursor);
       console.log('All styles have been added to products.');
       console.log('ETL complete. Closing connection');
       mongoose.disconnect();
