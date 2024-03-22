@@ -4,7 +4,7 @@ const fastcsv = require('fast-csv');
 
 let counter = 0;
 
-const stream = fs.createWriteStream('server/database/csvData/cleanData/photos.csv');
+const stream = fs.createWriteStream('server/database/csvData/photos.csv');
 const csvStream = fastcsv.format({ headers: true });
 csvStream.pipe(stream);
 
