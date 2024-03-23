@@ -4,21 +4,21 @@ import { sleep } from 'k6';
 export const options = {
 
   stages: [
-    { duration: '10s', target: 100 },
-    { duration: '15s', target: 100 },
+    { duration: '10s', target: 10 },
+    { duration: '15s', target: 10 },
     { duration: '5s', target: 0 },
   ],
 };
 
 const endPoints = {
-  getProducts: (page = 1, count = 5) => `?page=${page}&count=${count}`,
-  getProduct: '999999',
-  getStyles: '999999/styles',
-  getRelated: '999999/Related',
-  slowGetProduct: 'slow',
+  products: (page = 1, count = 5) => `?page=${page}&count=${count}`,
+  product: '999999',
+  styles: '999999/styles',
+  related: '999999/Related',
+  slow: 'slow',
 };
 
 export default function () {
-  http.get(`http://localhost:3000/products/${endPoints.getProduct}`);
+  http.get(`http://localhost:3000/products/${endPoints.slow}`);
   sleep(1);
 }
