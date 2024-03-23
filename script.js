@@ -10,7 +10,15 @@ export const options = {
   ],
 };
 
+const endPoints = {
+  getProducts: (page = 1, count = 5) => `?page=${page}&count=${count}`,
+  getProduct: '999999',
+  getStyles: '999999/styles',
+  getRelated: '999999/Related',
+  slowGetProduct: 'slow',
+};
+
 export default function () {
-  http.get('http://localhost:3000/products/999999');
+  http.get(`http://localhost:3000/products/${endPoints.getProduct}`);
   sleep(1);
 }
