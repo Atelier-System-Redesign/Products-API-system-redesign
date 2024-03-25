@@ -4,7 +4,7 @@ const productSchema = require('./productSchema');
 
 const dbName = 'products';
 
-const uri = `mongodb://localhost:27017/${dbName}`;
+const uri = `mongodb://${process.env.DATABASE_HOST_IP}:27017/${dbName}`;
 
 mongoose.connect(uri);
 
