@@ -1,8 +1,8 @@
-const { getRelatedProducts } = require('../model');
+const { getRelatedProducts, cacheFirstQuery } = require('../model');
 
 module.exports = (req, res) => {
   const productId = req.params.product_id;
-  getRelatedProducts(productId)
+  cacheFirstQuery('getRelatedProducts', getRelatedProducts, productId)
     .then((results) => {
       const result = results[0].relatedItems;
       res.send(result);

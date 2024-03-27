@@ -10,10 +10,10 @@ const photosSchema = new mongoose.Schema({
   url: String,
 }, { _id: false });
 
-const skusSchema = new mongoose.Schema({
-  quantity: Number,
-  size: String,
-}, { _id: false });
+// const skusSchema = new mongoose.Schema({
+//   quantity: Number,
+//   size: String,
+// }, { _id: false });
 
 const resultsSchema = new mongoose.Schema({
   style_id: Number,
@@ -22,10 +22,11 @@ const resultsSchema = new mongoose.Schema({
   sale_price: { type: [String, null], default: null },
   'default?': Boolean,
   photos: [photosSchema],
-  skus: {
-    type: Map,
-    of: skusSchema,
-  },
+  skus: mongoose.Mixed,
+  // {
+  //   type: Map,
+  //   of: skusSchema,
+  // },
 }, { _id: false });
 
 const productSchema = new mongoose.Schema({

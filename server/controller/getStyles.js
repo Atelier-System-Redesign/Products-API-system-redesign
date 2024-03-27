@@ -1,9 +1,9 @@
 /* eslint-disable no-underscore-dangle */
-const { getStyles } = require('../model');
+const { getStyles, cacheFirstQuery } = require('../model');
 
 module.exports = (req, res) => {
   const productId = req.params.product_id;
-  getStyles(productId)
+  cacheFirstQuery('getStyles', getStyles, productId)
     .then((results) => {
       if (results.length) {
         const result = { ...results[0] }._doc;
