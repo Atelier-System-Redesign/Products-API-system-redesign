@@ -8,12 +8,10 @@ module.exports = async function getProduct(keyName, queryCallback, ...params) {
   let result = myCache.get(cacheKey);
 
   if (result) {
-    console.log(`result found in cache: ${result}`);
     return result;
   }
   try {
     result = await queryCallback(...params);
-    console.log(`result found in database: ${result}`);
     myCache.set(cacheKey, result);
     console.log('results cached');
     return result;
