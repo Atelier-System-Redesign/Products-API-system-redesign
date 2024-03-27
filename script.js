@@ -19,6 +19,6 @@ const endPoints = {
 };
 
 export default function () {
-  http.get(`http://localhost:3000/products/${endPoints.slow}`);
+  http.get(`http://localhost:3000/products/${endPoints.product}`);
   sleep(1);
 }

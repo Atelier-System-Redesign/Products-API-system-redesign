@@ -1,7 +1,7 @@
-const { getProduct } = require('../model');
+const { getProduct, cacheFirstQuery } = require('../model');
 
 module.exports = (req, res) => {
   const productId = req.params.product_id;
-  getProduct(productId)
+  cacheFirstQuery('getProduct', getProduct, productId)
     .then((results) => res.send(results[0]));
 };

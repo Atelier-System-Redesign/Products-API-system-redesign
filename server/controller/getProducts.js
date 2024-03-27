@@ -1,8 +1,8 @@
-const { getProducts } = require('../model');
+const { getProducts, cacheFirstQuery } = require('../model');
 
 module.exports = (req, res) => {
   const page = req.query.page || 1;
   const count = req.query.count || 5;
-  getProducts(page, count)
+  cacheFirstQuery('getProducts', getProducts, page, count)
     .then((results) => res.send(results));
 };
