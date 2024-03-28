@@ -12,8 +12,7 @@ module.exports = async function getProduct(keyName, queryCallback, ...params) {
   }
   try {
     result = await queryCallback(...params);
-    myCache.set(cacheKey, result);
-    console.log('results cached');
+    myCache.set(cacheKey, result, 300);
     return result;
   } catch (error) {
     console.log(`Error getting product from database: ${error}`);
