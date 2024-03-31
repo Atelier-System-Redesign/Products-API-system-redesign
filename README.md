@@ -1,18 +1,18 @@
-# Ratings-And-Reviews-SDC
+# Products-Service System Redesign
 
 <a id='readme-top'> </a>
 
 <br />
 <div align="center">
-  <a href="https://github.com/Atelier-System-Redesign/Ratings-And-Reviews-SDC">
+  <a href="https://github.com/Atelier-System-Redesign/Products-SDC">
     <!-- <img src="" alt="finance tracker logo" width="50" height="50" /> -->
   </a>
   <h3 align="center">
-    Project Atelier Ratings-And-Reviews-SDC
+    Project Atelier Products-Service System Redesign
   </h3>
   <p align="center">
     <br />
-    <a href="https://github.com/Atelier-System-Redesign/Ratings-And-Reviews-SDC"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Atelier-System-Redesign/Products-SDC"><strong>Explore the docs »</strong></a>
     <br />
   </p>
 </div>
@@ -62,7 +62,7 @@
 <div align="center">
 
 <p>
-  Project Atelier is a desktop and mobile friendly app utilizing Node.js, React and Express to provide a modern e-commerce portal that is not just functional, but also intuitive and user-friendly. The backend service created here utilizes NginX, MongoDB and Node-Cache to create a seamless flow of data to the client, and allowing for horizontal scaling to handle increased traffic while maintaining an average response time of under 20 milliseconds.
+  Project Atelier is a desktop and mobile friendly app utilizing Node.js, React and Express to provide a modern e-commerce portal that is not just functional, but also intuitive and user-friendly. The backend service created here utilizes NginX, MongoDB and Node-Cache to create a seamless flow of data to the client, and allowing for horizontal scaling to handle increased traffic while maintaining low service response times.
 
 ### Built With
 
@@ -79,7 +79,7 @@
 ## Getting Started
 
 <p>
-    Instructions to setup the Ratings-And-Reviews API on your local machine below.
+    Instructions to setup the Products API on your local machine below.
 </p>
 
 ### Prerequisites
