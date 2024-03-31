@@ -1,4 +1,4 @@
-# Products-Service System Redesign
+# Products System Redesign
 
 <a id='readme-top'> </a>
 
