@@ -69,7 +69,7 @@
 [![node.js](https://img.shields.io/badge/node-%23000000.svg?style=for-the-badge&logo=node.js)](https://nodejs.org/)
 [![NginX](https://img.shields.io/badge/nginx-%23000000.svg?style=for-the-badge&logo=nginx&logoColor=darkgreen)](https://www.nginx.com/)
 [![node-cache](https://img.shields.io/badge/node--cache-%23000000.svg?style=for-the-badge&logo=node-cache)](https://www.npmjs.com/package/node-cache)
-[![Express](https://img.shields.io/badge/express-%23000000.svg?style=for-the-badge&logo=express)](https://expressjs.com/)
+[![Express](https://img.shields.io/badge/express-%23000000.svg?style=for-the-badge&logo=express&logoColor=green)](https://expressjs.com/)
 [![MongoDB](https://img.shields.io/badge/Mongo--DB-%23000000?style=for-the-badge&logo=mongodb&logoColor=darkGreen)](https://www.mongodb.com/)
 [![Mongoose](https://img.shields.io/badge/Mongoose.JS-%23000000?style=for-the-badge&logo=mongoose.js)](https://mongoosejs.com/)
 
@@ -86,7 +86,7 @@
 ### Prerequisites
 
 [![node.js](https://img.shields.io/badge/node-%23000000.svg?style=for-the-badge&logo=node.js)](https://nodejs.org/)
-[![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
+[![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=darkgreen)](https://www.npmjs.com/)
 
 ```sh
 npm install npm@latest -g
