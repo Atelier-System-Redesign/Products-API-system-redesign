@@ -85,8 +85,8 @@
 
 ### Prerequisites
 
-![node.js](https://img.shields.io/badge/node-%23000000.svg?style=for-the-badge&logo=node.js)
-![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
+[![node.js](https://img.shields.io/badge/node-%23000000.svg?style=for-the-badge&logo=node.js)](https://nodejs.org/)
+[![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
 ```sh
 npm install npm@latest -g
