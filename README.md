@@ -114,7 +114,7 @@ npm install npm@latest -g
 
 ## Usage
 
-Project Atelier is run on the designated port. Local testing can be done via K6 using the script
+Project Atelier is run on the designated port. Local testing can be performed by installing K6 and entering the following command in the projects root directory:
 ```sh
 k6 run script.js
 ```
