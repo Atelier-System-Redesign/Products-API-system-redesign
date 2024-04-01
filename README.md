@@ -70,7 +70,7 @@
 ![NginX](https://img.shields.io/badge/nginx-%23000000.svg?style=for-the-badge&logo=nginx&logoColor=white)
 ![node-cache](https://img.shields.io/badge/node--cache-%23000000.svg?style=for-the-badge&logo=node.js)
 ![Express](https://img.shields.io/badge/express-%23000000.svg?style=for-the-badge&express=next.js)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23000000.svg?style=for-the-badge&logo=postgresql)
+![MongoDB](https://img.shields.io/badge/MongoDB-%23000000?style=for-the-badge&logo=mongodb&logoColor=darkGreen)
 
 <p align="right">
   (<a href="#readme-top">back to top</a>)
