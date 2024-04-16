@@ -126,9 +126,11 @@ or by utilizing tools such as PostMan.
 
 ## Optimizations
 
--  Improved query time by 98% through data transformation and consolidation.
--  Incorperated NginX Least Connections load balancing for horizontal scaling.
--  Increased database capacity by a factor of 5 through server side caching to reduce the load on the on MongoDB's native caching features.
+Improved query time by 98% through data transformation and consolidation.
+
+Incorperated NginX Least Connections load balancing for horizontal scaling.
+
+Increased database capacity by a factor of 5 through server side caching to reduce the load on the on MongoDB's native caching features.
 
 <!-- CONTACT -->
 
