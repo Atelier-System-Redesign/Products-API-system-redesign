@@ -126,7 +126,7 @@ or by utilizing tools such as PostMan.
 
 ## Optimizations
 
-Improved query time by 98% through data transformation and consolidation.
+Reduced query time by 48% through database migration to MongoDB and data and consolidation.
 
 Incorperated NginX Least Connections load balancing for horizontal scaling.
 
